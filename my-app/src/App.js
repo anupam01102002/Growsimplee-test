@@ -5,6 +5,7 @@ import "jquery/dist/jquery.min.js";
 import "datatables.net-dt/js/dataTables.dataTables";
 import "datatables.net-dt/css/jquery.dataTables.min.css";
 import $ from "jquery";
+import image from "./ipl.jpg"
 
 function App() {
   const [data, setData] = useState(match);
@@ -43,6 +44,11 @@ function App() {
   return (
     <>
       <div class="topnav">
+      <a class="navbar-brand" href="/">
+      <div class="logo-image">
+      <img src = {image} />
+      </div>
+</a>
         <a class="active" href="#home">Home</a>
         <a href="#news">News</a>
         <a href="#contact">Contact</a>
@@ -55,7 +61,7 @@ function App() {
       >
         <thead>
           <tr>
-            <th >ID</th>
+            <th style={{width:"50%"}}>ID</th>
             <th>season</th>
             <th>date</th>
             <th>City</th>
