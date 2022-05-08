@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/http//anupam01102002.github.io/Growsimplee-test/static/css/main.d30c9bcc.css",
+    "main.js": "/http//anupam01102002.github.io/Growsimplee-test/static/js/main.2139adde.js",
+    "static/js/787.28cb0dcd.chunk.js": "/http//anupam01102002.github.io/Growsimplee-test/static/js/787.28cb0dcd.chunk.js",
+    "static/media/ipl.jpg": "/http//anupam01102002.github.io/Growsimplee-test/static/media/ipl.400e98a50cf747f9c555.jpg",
+    "index.html": "/http//anupam01102002.github.io/Growsimplee-test/index.html",
+    "main.d30c9bcc.css.map": "/http//anupam01102002.github.io/Growsimplee-test/static/css/main.d30c9bcc.css.map",
+    "main.2139adde.js.map": "/http//anupam01102002.github.io/Growsimplee-test/static/js/main.2139adde.js.map",
+    "787.28cb0dcd.chunk.js.map": "/http//anupam01102002.github.io/Growsimplee-test/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d30c9bcc.css",
+    "static/js/main.2139adde.js"
+  ]
+}
