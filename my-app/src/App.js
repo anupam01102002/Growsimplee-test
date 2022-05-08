@@ -42,10 +42,20 @@ function App() {
   });
   return (
     <>
-      <table id="example" className="table table-hover table-bordered cell-border">
+      <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+      <table
+        id="example"
+        className="table table-hover table-bordered cell-border display compact"
+        width="100%"
+      >
         <thead>
           <tr>
-            <th>ID</th>
+            <th >ID</th>
             <th>season</th>
             <th>date</th>
             <th>City</th>
@@ -90,5 +100,4 @@ function App() {
     </>
   );
 }
-
 export default App;
