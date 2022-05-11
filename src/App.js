@@ -40,17 +40,7 @@ function App() {
         },
         bDestroy: true,
         // scrollX: true,
-        columnDefs: [
-          { Width: "5%", targets: 0 },
-          { Width: "5%", targets: 1 },
-          { Width: "15%", targets: 2 },
-          { Width: "15%", targets: 3 },
-          { Width: "15%", targets: 4 },
-          { Width: "15%", targets: 5 },
-          { Width: "10%", targets: 6 },
-          { Width: "10%", targets: 7 },
-          { Width: "10%", targets: 8 },
-        ],
+        
       });
     });
   });
@@ -60,15 +50,6 @@ function App() {
         <img src={image} alt="ipl image" />
       </div>
       <div className="video">
-        {/* <iframe
-          width="100%"
-          height="315"
-          src="https://www.youtube.com/embed/lKKtku6CqtQ?controls=0&autoplay=1&mute=1&loop=1"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe> */}
         <video autoPlay muted loop>
           <source src={iplvideo} type="video/mp4" />
         </video>
@@ -81,14 +62,18 @@ function App() {
         <thead>
           <tr>
             <th style={{ width: "50%" }}>ID</th>
-            <th>season</th>
-            <th>date</th>
+            <th>Season</th>
+            <th>Date</th>
             <th>City</th>
+            <th>Venue</th>
             <th>Team 1</th>
             <th>Team 2</th>
+            <th>Toss Winner</th>
+            <th>Toss Decision</th>
             <th>Winner</th>
-            <th>win by runs</th>
-            <th>win by wickets</th>
+            <th>Player of the Match</th>
+            <th>Win by runs</th>
+            <th>Win by wickets</th>
           </tr>
         </thead>
         <tbody>
@@ -99,9 +84,13 @@ function App() {
                 <td>{item.season}</td>
                 <td>{item.date}</td>
                 <td>{item.city}</td>
+                <td>{item.venue}</td>
                 <td>{item.team1}</td>
                 <td>{item.team2}</td>
+                <td>{item.toss_winner}</td>
+                <td>{item.toss_decision}</td>
                 <td>{item.winner}</td>
+                <td>{item.player_of_match}</td>
                 <td>{item.win_by_runs}</td>
                 <td>{item.win_by_wickets}</td>
               </tr>
@@ -111,14 +100,18 @@ function App() {
         <tfoot>
           <tr>
             <th>ID</th>
-            <th>season</th>
-            <th>date</th>
+            <th>Season</th>
+            <th>Date</th>
             <th>City</th>
+            <th>Venue</th>
             <th>Team 1</th>
             <th>Team 2</th>
+            <th>Toss Winner</th>
+            <th>Toss Decision</th>
             <th>Winner</th>
-            <th>win by runs</th>
-            <th>win by wickets</th>
+            <th>Player of the Match</th>
+            <th>Win by runs</th>
+            <th>Win by wickets</th>
           </tr>
         </tfoot>
       </table>
@@ -126,7 +119,7 @@ function App() {
         <div class="container">
           <div class="row">
             <div class="col-sm-12 col-md-6">
-              <h6>About</h6>
+              <h2>About</h2>
               <p class="text-justify">
                 The Indian Premier League (IPL), also officially known as TATA
                 IPL for sponsorship reasons is a professional men's Twenty20
