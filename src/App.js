@@ -5,6 +5,8 @@ import "jquery/dist/jquery.min.js";
 import "datatables.net-dt/js/dataTables.dataTables";
 import "datatables.net-dt/css/jquery.dataTables.min.css";
 import $ from "jquery";
+import image from "./ipl.png";
+import iplvideo from "./ipl.mp4";
 
 function App() {
   const [data, setData] = useState(match);
@@ -18,7 +20,7 @@ function App() {
       });
 
       // DataTable
-      var table = $("#example").DataTable({
+      $("#example").DataTable({
         initComplete: function () {
           // Apply the search
           this.api()
@@ -37,71 +39,90 @@ function App() {
             });
         },
         bDestroy: true,
+        // scrollX: true,
+        "columnDefs": [
+          { "Width": "5%" , "targets": 0 },
+          { "Width": "5%" , "targets": 1 },
+          { "Width": "15%", "targets": 2 },
+          { "Width": "15%", "targets": 3  },
+          { "Width": "15%", "targets": 4  },
+          { "Width": "15%", "targets": 5  },
+          { "Width": "10%", "targets": 6  },
+          { "Width": "10%", "targets": 7  },
+          { "Width": "10%", "targets": 8  },
+        ]
+      
       });
     });
   });
   return (
     <>
-      <div class="topnav">
-      <a class="navbar-brand" href="/">
-      <div class="logo-image">
-      
+      <div className="topnav">
+        <img src={image} alt="ipl image" />
       </div>
-</a>
-        <a class="active" href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+      <div className="video">
+        {/* <iframe
+          width="100%"
+          height="315"
+          src="https://www.youtube.com/embed/lKKtku6CqtQ?controls=0&autoplay=1&mute=1&loop=1"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe> */}
+        <video autoPlay muted loop>
+          <source src={iplvideo} type="video/mp4" />
+        </video>
       </div>
-      <table
-        id="example"
-        className="table table-hover table-bordered cell-border display compact"
-        width="100%"
-      >
-        <thead>
-          <tr>
-            <th style={{width:"50%"}}>ID</th>
-            <th>season</th>
-            <th>date</th>
-            <th>City</th>
-            <th>Team 1</th>
-            <th>Team 2</th>
-            <th>Winner</th>
-            <th>win_by_runs</th>
-            <th>win_by_wickets</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((item, id) => {
-            return (
-              <tr key={item.id}>
-                <td>{item.id}</td>
-                <td>{item.season}</td>
-                <td>{item.date}</td>
-                <td>{item.city}</td>
-                <td>{item.team1}</td>
-                <td>{item.team2}</td>
-                <td>{item.winner}</td>
-                <td>{item.win_by_runs}</td>
-                <td>{item.win_by_wickets}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-        <tfoot>
-          <tr>
-            <th>ID</th>
-            <th>season</th>
-            <th>date</th>
-            <th>City</th>
-            <th>Team 1</th>
-            <th>Team 2</th>
-            <th>Winner</th>
-            <th>win_by_runs</th>
-            <th>win_by_wickets</th>
-          </tr>
-        </tfoot>
-      </table>
+        <table
+          id="example"
+          className="table table-hover table-bordered cell-border display compact"
+          width="100%"
+        >
+          <thead>
+            <tr>
+              <th style={{ width: "50%" }}>ID</th>
+              <th>season</th>
+              <th>date</th>
+              <th>City</th>
+              <th>Team 1</th>
+              <th>Team 2</th>
+              <th>Winner</th>
+              <th>win by runs</th>
+              <th>win by wickets</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((item, id) => {
+              return (
+                <tr key={item.id}>
+                  <td>{item.id}</td>
+                  <td>{item.season}</td>
+                  <td>{item.date}</td>
+                  <td>{item.city}</td>
+                  <td>{item.team1}</td>
+                  <td>{item.team2}</td>
+                  <td>{item.winner}</td>
+                  <td>{item.win_by_runs}</td>
+                  <td>{item.win_by_wickets}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>ID</th>
+              <th>season</th>
+              <th>date</th>
+              <th>City</th>
+              <th>Team 1</th>
+              <th>Team 2</th>
+              <th>Winner</th>
+              <th>win by runs</th>
+              <th>win by wickets</th>
+            </tr>
+          </tfoot>
+        </table>
     </>
   );
 }

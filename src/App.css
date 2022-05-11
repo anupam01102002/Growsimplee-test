@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+.topnav{
+  width: 100%;
+  height: 10vh;
+  background-color: #F6F6F6;
+  display: flex;
+  justify-content: center;
+}
+.video{
+  width: 100vw;
+  height: 88vh;
+}
+.video video{
+  width: 100%;
+  height: 100%;
+}
+.dataTables_wrapper{
+ width: 100%;
+ overflow-x: scroll;
+ margin: 20px auto;
+}
