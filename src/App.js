@@ -7,6 +7,7 @@ import "datatables.net-dt/css/jquery.dataTables.min.css";
 import $ from "jquery";
 import image from "./ipl.png";
 import iplvideo from "./ipl.mp4";
+import {Bar} from "react-chartjs-2"
 
 function App() {
   const [data, setData] = useState(match);
@@ -54,6 +55,7 @@ function App() {
           <source src={iplvideo} type="video/mp4" />
         </video>
       </div>
+      
       <table
         id="example"
         className="table table-hover table-bordered cell-border display compact"
@@ -121,7 +123,7 @@ function App() {
             <div class="col-sm-12 col-md-6">
               <h2>About</h2>
               <p class="text-justify">
-                The Indian Premier League (IPL), also officially known as TATA
+                The Indian Premier League (IPL), also officially known as VIVO
                 IPL for sponsorship reasons is a professional men's Twenty20
                 cricket league, contested by ten teams based out of ten Indian
                 cities.The league was founded by the Board of Control
